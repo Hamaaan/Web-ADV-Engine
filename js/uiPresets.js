@@ -7,13 +7,13 @@ export const uiPresets = {
     },
     dialogue: {
       characterName: {
-        fontSize: "1.1em",
-        fontColor: "#e7c642ff",
+        fontSize: "2.5em",
+        fontColor: "white",
         fontFamily: "sans-serif",
       },
       text: {
-        fontSize: "1.1em",
-        fontColor: "#FFFFFF",
+        fontSize: "2.2em",
+        fontColor: "white",
         fontFamily: "sans-serif",
       },
     },

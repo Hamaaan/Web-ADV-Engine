@@ -4,7 +4,7 @@ export const dialogueTextPresets = {
   },
   yellow_large: {
     color: "yellow",
-    fontSize: "1.2em",
+    fontSize: "3.5em",
     fontWeight: "bold",
   },
   red_bold: {

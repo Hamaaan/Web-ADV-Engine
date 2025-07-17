@@ -311,15 +311,15 @@ body {
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
   #character-name {
-    font-size: 1.5em; /* Adjust as needed for mobile */
+    font-size: 2.5em; /* Adjust as needed for mobile */
   }
 
   #text {
-    font-size: 1.4em; /* Adjust as needed for mobile */
+    font-size: 2.2em; /* Adjust as needed for mobile */
   }
 
   .choice-button {
-    font-size: 1.5em; /* Adjust as needed for mobile */
+    font-size: 2.5em; /* Adjust as needed for mobile */
     padding: 2vh 3vw; /* Adjust padding for mobile buttons */
   }
 
