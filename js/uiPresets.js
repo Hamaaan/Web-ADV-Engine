@@ -26,12 +26,12 @@ export const uiPresets = {
     },
     dialogue: {
       characterName: {
-        fontSize: "1.3em",
+        fontSize: "2.5em",
         fontColor: "#ADD8E6", // Light Blue
         fontFamily: "'メイリオ', Meiryo, sans-serif",
       },
       text: {
-        fontSize: "1.2em",
+        fontSize: "2.2em",
         fontColor: "#F0F8FF", // AliceBlue
         fontFamily:
           "'游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', sans-serif",

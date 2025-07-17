@@ -316,6 +316,7 @@ async function initializeGame() {
       if (selectedPreset.dialogue.text) {
         if (selectedPreset.dialogue.text.fontSize) {
           textElement.style.fontSize = selectedPreset.dialogue.text.fontSize;
+          console.log("Setting textElement font-size to:", selectedPreset.dialogue.text.fontSize); // 追加
         }
         if (selectedPreset.dialogue.text.fontColor) {
           textElement.style.color = selectedPreset.dialogue.text.fontColor;
