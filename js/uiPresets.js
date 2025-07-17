@@ -1,18 +1,18 @@
 export const uiPresets = {
   default: {
     titleScreen: {
-      fontSize: "4em",
+      fontSize: "5em",
       fontColor: "white",
       fontFamily: "sans-serif",
     },
     dialogue: {
       characterName: {
-        fontSize: "2.5em",
+        fontSize: "3.2em",
         fontColor: "white",
         fontFamily: "sans-serif",
       },
       text: {
-        fontSize: "2.2em",
+        fontSize: "3em",
         fontColor: "white",
         fontFamily: "sans-serif",
       },
@@ -26,12 +26,12 @@ export const uiPresets = {
     },
     dialogue: {
       characterName: {
-        fontSize: "2.5em",
+        fontSize: "3.2em",
         fontColor: "#ADD8E6", // Light Blue
         fontFamily: "'メイリオ', Meiryo, sans-serif",
       },
       text: {
-        fontSize: "2.2em",
+        fontSize: "3em",
         fontColor: "#F0F8FF", // AliceBlue
         fontFamily:
           "'游ゴシック', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', sans-serif",
