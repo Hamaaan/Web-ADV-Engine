@@ -1,0 +1,386 @@
+{
+  "title": "New Story",
+  "titleScreenBackground": "bg/title.jpg",
+  "titleScreenTitle": "僕らのADV",
+  "textSpeed": 50,
+  "uiPreset": "fantasy",
+  "scenes": {
+    "start": {
+      "background": "bg/park.jpg",
+      "events": [
+        {
+          "type": "system",
+          "setVar": {
+            "name": "courage",
+            "value": 0
+          }
+        },
+        {
+          "type": "system",
+          "setVar": {
+            "name": "turn",
+            "value": 0
+          }
+        },
+        {
+          "type": "dialogue",
+          "character": "レン",
+          "text": "なあ、カイト…。ちょっといいか？",
+          "se": "SE/open.mp3",
+          "charImage": "chara/man1.png",
+          "charPosition": "left",
+          "nextSceneId": "talk_1"
+        }
+      ]
+    },
+    "talk_1": {
+      "background": "bg/park.jpg",
+      "events": [
+        {
+          "type": "dialogue",
+          "character": "カイト",
+          "text": "ん？ どうしたんだ、レン。改まって。",
+          "charImage": "chara/man2.png",
+          "charPosition": "right"
+        },
+        {
+          "type": "choice",
+          "options": [
+            {
+              "text": "「今日の空、綺麗だな」",
+              "nextSceneId": "talk_2-1",
+              "setVar": {
+                "name": "courage",
+                "value": "+=1"
+              }
+            },
+            {
+              "text": "「いや、なんでもない」",
+              "nextSceneId": "talk_2-2",
+              "setVar": {
+                "name": "courage",
+                "value": "+=0"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "talk_2-1": {
+      "background": "bg/park.jpg",
+      "events": [
+        {
+          "type": "system",
+          "text": "",
+          "setVar": {
+            "name": "turn",
+            "value": "+=1"
+          }
+        },
+        {
+          "type": "dialogue",
+          "character": "カイト",
+          "text": "空？ ああ、確かにな。でも、お前が言いたいのはそんなことじゃないだろ？",
+          "charImage": "chara/man2.png",
+          "charPosition": "right"
+        },
+        {
+          "type": "choice",
+          "options": [
+            {
+              "text": "「カイトこそ、何か悩み事か？」",
+              "nextSceneId": "talk_3-1",
+              "setVar": {
+                "name": "courage",
+                "value": "+=1"
+              }
+            },
+            {
+              "text": "「……」",
+              "nextSceneId": "talk_3-1",
+              "setVar": {
+                "name": "courage",
+                "value": "+=0"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "talk_2-2": {
+      "background": "bg/park.jpg",
+      "events": [
+        {
+          "type": "system",
+          "text": "",
+          "setVar": {
+            "name": "turn",
+            "value": "+=1"
+          }
+        },
+        {
+          "type": "dialogue",
+          "character": "カイト",
+          "text": "なんなんだよ？言いたいことがあるならいいなよ",
+          "charImage": "chara/man2.png",
+          "charPosition": "right"
+        },
+        {
+          "type": "choice",
+          "options": [
+            {
+              "text": "「カイトこそ、何か悩み事か？」",
+              "nextSceneId": "talk_3-1",
+              "setVar": {
+                "name": "courage",
+                "value": "+=1"
+              }
+            },
+            {
+              "text": "「……」",
+              "nextSceneId": "talk_3-2",
+              "setVar": {
+                "name": "courage",
+                "value": "+=0"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "talk_3-1": {
+      "background": "bg/park.jpg",
+      "events": [
+        {
+          "type": "system",
+          "text": "",
+          "setVar": {
+            "name": "turn",
+            "value": "+=1"
+          }
+        },
+        {
+          "type": "dialogue",
+          "character": "カイト",
+          "text": "俺の心配か？ ありがとう。でも、今はレンの話を聞きたい。",
+          "charImage": "chara/man2.png",
+          "charPosition": "right"
+        },
+        {
+          "type": "choice",
+          "options": [
+            {
+              "text": "「実は、ずっと言いたかったことがある」",
+              "nextSceneId": "confession_intro",
+              "setVar": {
+                "name": "courage",
+                "value": "+=1"
+              }
+            },
+            {
+              "text": "「……ごめん、やっぱり言えない」",
+              "nextSceneId": "confession_intro",
+              "setVar": {
+                "name": "courage",
+                "value": "+=0"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "talk_3-2": {
+      "background": "bg/park.jpg",
+      "events": [
+        {
+          "type": "system",
+          "text": "",
+          "setVar": {
+            "name": "turn",
+            "value": "+=1"
+          }
+        },
+        {
+          "type": "dialogue",
+          "character": "カイト",
+          "text": "...なんだよ、今日変だぞお前。なんかあったのか？",
+          "charImage": "chara/man2.png",
+          "charPosition": "right"
+        },
+        {
+          "type": "choice",
+          "options": [
+            {
+              "text": "「実は、ずっと言いたかったことがある」",
+              "nextSceneId": "confession_intro",
+              "setVar": {
+                "name": "courage",
+                "value": "+=1"
+              }
+            },
+            {
+              "text": "「……ごめん、やっぱり言えない」",
+              "nextSceneId": "confession_intro",
+              "setVar": {
+                "name": "courage",
+                "value": "+=0"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "confession_intro": {
+      "background": "bg/park.jpg",
+      "events": [
+        {
+          "type": "system",
+          "text": "",
+          "setVar": {
+            "name": "turn",
+            "value": "+=1"
+          }
+        },
+        {
+          "type": "dialogue",
+          "text": "（時間切れだ…）",
+          "condition": {
+            "var": "turn",
+            "op": "==",
+            "value": 3
+          }
+        },
+        {
+          "type": "dialogue",
+          "character": "レン",
+          "text": "ずっと言えなかったんだけど…俺、<speed:200>お前のことが…</speed>",
+          "charImage": "chara/man1.png",
+          "charPosition": "left"
+        },
+        {
+          "type": "dialogue",
+          "character": "カイト",
+          "text": "…え？",
+          "charImage": "chara/man2.png",
+          "charPosition": "right",
+          "nextSceneId": "final_choice"
+        }
+      ]
+    },
+    "final_choice": {
+      "background": "bg/park_evening.jpg",
+      "events": [
+        {
+          "type": "choice",
+          "options": [
+            {
+              "text": "「好きだ！」",
+              "nextSceneId": "confess_yes",
+              "condition": {
+                "var": "courage",
+                "op": ">=",
+                "value": 2
+              }
+            },
+            {
+              "text": "「……なんでもない」",
+              "nextSceneId": "confess_no"
+            }
+          ]
+        }
+      ]
+    },
+    "confess_yes": {
+      "background": "bg/park_evening.jpg",
+      "events": [
+        {
+          "type": "dialogue",
+          "character": "レン",
+          "text": "……好きだ！",
+          "se": "SE/heart.mp3",
+          "charImage": "chara/man1.png",
+          "charPosition": "left"
+        },
+        {
+          "type": "dialogue",
+          "character": "カイト",
+          "text": "俺もだよ、レン。ずっと見てた。",
+          "charImage": "chara/man2.png",
+          "charPosition": "right"
+        },
+        {
+          "type": "dialogue",
+          "character": "レン",
+          "text": "！…本当か…？これからも、<speed:100>ずっと一緒にいてほしい。</speed>",
+          "charImage": "chara/man1.png",
+          "charPosition": "left",
+          "nextSceneId": "ending_good"
+        }
+      ]
+    },
+    "confess_no": {
+      "background": "bg/park_evening.jpg",
+      "events": [
+        {
+          "type": "dialogue",
+          "character": "レン",
+          "text": "……やっぱり、なんでもないんだ。忘れてくれ。",
+          "charImage": "chara/man1.png",
+          "charPosition": "left"
+        },
+        {
+          "type": "dialogue",
+          "character": "カイト",
+          "text": "…？ そ、そうか…。",
+          "charImage": "chara/man2.png",
+          "charPosition": "right"
+        },
+        {
+          "type": "dialogue",
+          "character": "（レンの心の声）",
+          "text": "（結局、何も言えなかった…。）",
+          "charImage": null,
+          "nextSceneId": "ending_bad"
+        }
+      ]
+    },
+    "ending_good": {
+      "background": "bg/beach_sunset.jpg",
+      "events": [
+        {
+          "type": "end",
+          "message": "こうしてぼくらの旅ははじまったのであった…",
+          "se": "SE/end.mp3",
+          "charImage": null,
+          "nextSceneId": "replay"
+        }
+      ]
+    },
+    "ending_bad": {
+      "background": "bg/park_evening.jpg",
+      "events": [
+        {
+          "type": "end",
+          "message": "何も伝えず、ぼくたちはまた普通の日々に戻った。",
+          "se": "SE/end.mp3",
+          "charImage": null,
+          "nextSceneId": "replay"
+        }
+      ]
+    },
+    "replay": {
+      "background": "",
+      "events": [
+        {
+          "type": "choice",
+          "options": [
+            {
+              "text": "はじめから",
+              "nextSceneId": "start"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

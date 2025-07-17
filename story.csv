@@ -1,0 +1,12 @@
+SceneID,EventType,Character,Text,NextSceneID_Dialogue,SE,SetVar_Name,SetVar_Value,Condition_Var,Condition_Op,Condition_Value,Choice1_Text,Choice1_NextSceneID,Choice1_Condition_Var,Choice1_Condition_Op,Choice1_Condition_Value,Choice2_Text,Choice2_NextSceneID,Choice2_Condition_Var,Choice2_Condition_Op,Choice2_Condition_Value,Background
+start,dialogue,レン,なあ、カイト…。ちょっといいか？,,SE/open.wav,,,,,,,,,,,,,,,,bg/park.jpg
+,dialogue,カイト,ん？ どうしたんだ、レン。改まって。,,,,,,,,,,,,,,,,,,
+,dialogue,レン,ずっと言えなかったんだけど…俺、お前のことが…,,,,,,,,,,,,,,,,,,
+,dialogue,カイト,…え？,confess_choice,,,,,,,,,,,,,,,,,
+confess_choice,choice,,,,,,,,,,「好きだ！」,confess_yes,,,,「やっぱりやめた」,confess_no,,,,
+confess_yes,dialogue,レン,……好きだ！,,SE/heart.wav,confess,1,,,,,,,,,,,,,,bg/park_evening.jpg
+,dialogue,カイト,俺もだよ、レン。ずっと見てた。,,,,,,,,,,,,,,,,,,
+,dialogue,レン,！…本当か…？これからも、ずっと一緒にいてほしい。,ending_good,,,,,,,,,,,,,,,,,
+ending_good,end,,こうしてぼくらの旅ははじまったのであった…,,SE/end.wav,,,,,,,,,,,,,,,,bg/sunset.jpg
+confess_no,dialogue,レン,……やっぱりやめておく。,ending_bad,,,,,,,,,,,,,,,,,bg/park_night.jpg
+ending_bad,end,,何も伝えず、ぼくたちはまた普通の日々に戻った。,,SE/end.wav,,,,,,,,,,,,,,,,bg/night.jpg

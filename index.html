@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ADV Game</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.playcanvas.com/playcanvas-stable.min.js"></script>
+  </head>
+  <body>
+    <div id="background-image"></div>
+    <canvas id="application-canvas"></canvas>
+
+    <div id="game-container">
+      <div id="character-display-area"></div>
+      <div id="dialogue-box" style="display: none">
+        <div id="character-name"></div>
+        <div id="text"></div>
+      </div>
+      <div id="choices-container"></div>
+      <div id="system-buttons">
+        <button id="menu-button" class="system-button">MENU</button>
+        <button id="auto-button" class="system-button">AUTO</button>
+        <button id="log-button" class="system-button">LOG</button>
+        <button id="skip-button" class="system-button">SKIP</button>
+      </div>
+
+      <div id="log-panel">
+        <div id="log-content"></div>
+        <button id="log-close-button" class="system-button">Close</button>
+      </div>
+
+      <div id="menu-panel">
+        <h2>MENU</h2>
+        <button id="return-to-title-button" class="menu-button">
+          タイトルへ
+        </button>
+        <button id="save-game-button" class="menu-button">セーブ</button>
+        <button id="load-game-button" class="menu-button">ロード</button>
+        <button id="menu-close-button" class="menu-button">閉じる</button>
+      </div>
+    </div>
+
+    <div id="title-screen">
+      <h1 id="game-title"></h1>
+      <button id="start-game-button" class="menu-button">ゲームスタート</button>
+      <button
+        id="continue-game-button"
+        class="menu-button"
+        style="display: none"
+      >
+        つづきから
+      </button>
+    </div>
+
+    <script type="module" src="js/UIManager.js"></script>
+    <script type="module" src="js/AudioManager.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

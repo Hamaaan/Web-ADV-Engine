@@ -1,0 +1,331 @@
+body {
+  font-family: sans-serif;
+}
+
+#game-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Character Display Area */
+#character-display-area {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%; /* Adjust as needed */
+  display: flex;
+  justify-content: center; /* Default to center */
+  align-items: flex-end; /* Align images to the bottom */
+  pointer-events: none; /* Allow clicks to pass through */
+}
+
+#character-display-area img {
+  position: absolute; /* Position images within the flex container */
+  height: 100%; /* Fill the height of the display area */
+  object-fit: contain;
+  object-position: bottom center;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0; /* Initially hidden */
+}
+
+/* Character Position Classes */
+#character-display-area img.char-pos-left {
+  left: 10%;
+  transform: translateX(0); /* Reset transform for left */
+}
+
+#character-display-area img.char-pos-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#character-display-area img.char-pos-right {
+  right: 10%;
+  transform: translateX(0); /* Reset transform for right */
+}
+
+/* Character Visibility */
+#character-display-area img.visible {
+  opacity: 1;
+}
+
+#dialogue-box {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  height: 180px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  box-sizing: border-box;
+}
+
+#character-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#text {
+  font-size: 1.1em;
+}
+
+#choices-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.choice-button {
+  padding: 15px 30px;
+  background-color: rgba(0, 100, 200, 0.8);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.choice-button:hover {
+  background-color: rgba(0, 120, 240, 0.9);
+}
+      body {
+        margin: 0;
+        overflow: hidden;
+        font-family: sans-serif;
+      }
+      #background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: background-image 1s ease-in-out; /* Optional: smooth transition */
+      }
+      #background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: background-image 1s ease-in-out; /* Optional: smooth transition */
+      }
+      .character-image {
+        position: absolute;
+        bottom: 0;
+        height: 80%; /* Adjust as needed */
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;
+      }
+      #character-image-left {
+        left: 10%;
+      }
+      #character-image-right {
+        right: 10%;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+      #game-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+      #dialogue-box {
+        position: absolute;
+        bottom: 10%; /* Changed from top */
+        left: 50%;
+        transform: translateX(-50%); /* Changed from translate */
+        width: 90%;
+        max-width: 1200px;
+        min-height: 180px; /* Set a minimum height */
+        height: auto; /* Adjust height automatically */
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 10px;
+        padding: 20px;
+        color: white;\
+        box-sizing: border-box;
+        display: none; /* Initially hidden */
+      }
+      #character-name {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      #text {
+        font-size: 1.1em;
+      }
+      #choices-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .choice-button {
+        padding: 15px 30px;
+        background-color: rgba(0, 100, 200, 0.8);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .choice-button:hover {
+        background-color: rgba(0, 120, 240, 0.9);
+      }
+
+      #system-buttons {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        gap: 10px;
+      }
+
+      .system-button {
+        padding: 10px 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        font-size: 0.9em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .system-button:hover {\
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .system-button.active {
+        background-color: rgba(0, 150, 255, 0.8);
+        border-color: #fff;
+        color: #fff;
+      }
+
+      #log-panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: auto;
+      }
+
+      #log-content {
+        flex-grow: 1;
+        overflow-y: auto;
+        margin-bottom: 10px;
+      }
+
+      .log-entry {
+        margin-bottom: 10px;
+      }
+
+      .log-character {
+        font-weight: bold;
+        color: #add8e6; /* Light blue for character names */
+      }
+
+      .log-text {
+        margin-left: 10px;
+      }
+
+      #log-close-button {
+        align-self: center;
+        margin-top: 10px;
+      }
+
+      #menu-panel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 1.5em;
+      }
+
+      .menu-button {
+        padding: 15px 30px;
+        background-color: rgba(0, 100, 200, 0.8);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .menu-button:hover {
+        background-color: rgba(0, 120, 240, 0.9);
+      }
+
+      #title-screen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.95); /* Dark overlay */
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100; /* Ensure it's on top */
+      }
+
+      #title-screen h1 {
+        font-size: 4em;
+        margin-bottom: 50px;
+      }
+
+      #start-game-button {
+        font-size: 1.5em;
+        padding: 20px 40px;
+        margin: 10px 20px;
+      }
+
+      #continue-game-button {
+        font-size: 1.5em;
+        padding: 20px 40px;
+        margin: 10px 20px;
+      }
